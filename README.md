@@ -19,17 +19,10 @@
 
 - 📫 How to reach me **nomaneon00@gmail.com**
 
-### Blogs posts
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://twitter.com/bin_shaded" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="bin_shaded" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/noman bin morshed" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="noman bin morshed" height="30" width="40" /></a>
-<a href="https://stackoverflow.com/users/hash noman slash" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="hash noman slash" height="30" width="40" /></a>
-<a href="https://kaggle.com/leibniz's gap" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="leibniz's gap" height="30" width="40" /></a>
-<a href="https://fb.com/noman bin morshed" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="noman bin morshed" height="30" width="40" /></a>
 <a href="https://medium.com/@been_shaded" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@been_shaded" height="30" width="40" /></a>
 <a href="https://www.hackerrank.com/@nomaneon00" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="@nomaneon00" height="30" width="40" /></a>
 <a href="https://www.leetcode.com/hashnomanslash" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="hashnomanslash" height="30" width="40" /></a>
