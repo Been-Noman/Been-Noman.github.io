@@ -24,7 +24,6 @@
 <p align="left">
 <a href="https://twitter.com/bin_shaded" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="bin_shaded" height="30" width="40" /></a>
 <a href="https://medium.com/@been_shaded" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@been_shaded" height="30" width="40" /></a>
-<a href="https://www.hackerrank.com/@nomaneon00" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="@nomaneon00" height="30" width="40" /></a>
 <a href="https://www.leetcode.com/hashnomanslash" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="hashnomanslash" height="30" width="40" /></a>
 <a href="https://www.topcoder.com/members/hashnomanslash" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/topcoder.svg" alt="hashnomanslash" height="30" width="40" /></a>
 </p>
