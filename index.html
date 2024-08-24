@@ -1,171 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noman Bin Morshed - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-        header {
-            background-color: #0b3d91;
-            color: #fff;
-            padding: 1rem 2rem;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin: 1rem 0;
-        }
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #ffcc00;
-        }
-        section {
-            padding: 2rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .about-me, .skills, .projects, .contact, .blog {
-            margin-bottom: 3rem;
-        }
-        .about-me h2, .skills h2, .projects h2, .contact h2, .blog h2 {
-            color: #0b3d91;
-            margin-bottom: 1rem;
-        }
-        .about-me p, .skills p, .contact p, .blog p {
-            line-height: 1.6;
-        }
-        .skills ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .skills ul li {
-            background-color: #0b3d91;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            margin: 0.5rem 0;
-            display: inline-block;
-            border-radius: 5px;
-        }
-        footer {
-            background-color: #0b3d91;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-        }
-        footer p {
-            margin: 0;
-        }
-        .projects ul, .blog ul {
-            list-style: none;
-            padding: 0;
-        }
-        .projects ul li, .blog ul li {
-            background-color: #eaeaea;
-            padding: 1rem;
-            margin: 0.5rem 0;
-            border-radius: 5px;
-        }
-        .projects ul li a, .blog ul li a {
-            text-decoration: none;
-            color: #0b3d91;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>Noman Bin Morshed</h1>
         <nav>
             <ul>
-                <li><a href="#about">About Me</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#memberships">Memberships</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#blog">Blog</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about" class="about-me">
-        <h2>About Me</h2>
-        <p>I am currently a third-year nuclear engineering major at the University of Dhaka. After experiencing the impact of computational aspects in science over the past two years, I have shifted my educational focus to theoretical computer science. I excel when working in collaborative groups to solve problems related to computational domains as the ever-expanding domain has left the possibility of working in isolation nearly impossible.</p>
-        <p>I also have deep interests in academic terrains such as philosophy, psychology, and theology. In the 15 years of my education, I’ve spent a significant amount of time in the classroom. I particularly enjoy working with younger children as they develop important skills. Now that I am finishing my junior year at DU, I am applying to several CE (Continuing Education) programs to learn more about child development and classroom best practices on APA (American Psychological Association). Even though I don't aspire to be a traditional teacher, I enjoy spending time with curious minds, encountering different worldviews, and have had the privilege of instructing in a prominent local academic care center.</p>
-        <p>I am a student member of several world-renowned organizations such as APS, APA, ACM, AMS, ISDSA, RSS, and SIAM. I am seeking research and industrial opportunities where efficient management and advanced technological practices can drive success. With the right resources and a strong team, I aim to contribute meaningfully to any organization I join. Leveraging the work ethic and engineering skills from my undergraduate education, I am confident in my ability to add significant value to both industry and academia.</p>
-    </section>
+    <main>
+        <section id="hero">
+            <h1>Noman Bin Morshed</h1>
+            <p>Nuclear Engineering Student | Aspiring Computer Scientist | Educator</p>
+        </section>
 
-    <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>C++</li>
-            <li>JavaScript</li>
-            <li>R</li>
-            <li>MS Office</li>
-            <li>Obsidian</li>
-            <li>Notion</li>
-            <li>Quillbot</li>
-            <li>Blender</li>
-            <li>Photoshop</li>
-            <li>After Effects</li>
-            <li>3DS Max</li>
-            <li>Maya</li>
-            <li>Cinema 4D</li>
-            <li>Houdini</li>
-            <li>Moho</li>
-            <li>Unity</li>
-            <li>Unreal Engine</li>
-        </ul>
-    </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am currently a third-year nuclear engineering major at the University of Dhaka. My academic journey has led me to shift my focus towards theoretical computer science, driven by the profound impact of computational aspects in science.</p>
+            <p>I thrive in collaborative environments, solving complex problems in computational domains. My interests extend beyond engineering, encompassing philosophy, psychology, and theology.</p>
+            <p>With 15 years of educational experience, I've developed a passion for teaching, particularly enjoying work with younger children. I'm currently applying to Continuing Education programs to further my understanding of child development and classroom best practices.</p>
+            <p>I'm seeking research and industrial opportunities where efficient management and advanced technological practices can drive success. With my strong work ethic and engineering skills, I aim to contribute meaningfully to both industry and academia.</p>
+        </section>
 
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="#">Project 1 Title</a> - Brief description of Project 1.</li>
-            <li><a href="#">Project 2 Title</a> - Brief description of Project 2.</li>
-            <li><a href="#">Project 3 Title</a> - Brief description of Project 3.</li>
-        </ul>
-    </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skill-category">
+                <h3>Coding</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>JavaScript</li>
+                    <li>R</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Editing</h3>
+                <ul>
+                    <li>MS Office</li>
+                    <li>Obsidian</li>
+                    <li>Notion</li>
+                    <li>Quillbot</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Animation & VFX</h3>
+                <ul>
+                    <li>Blender</li>
+                    <li>Adobe Photoshop</li>
+                    <li>Adobe After Effects</li>
+                    <li>3DS Max</li>
+                    <li>Maya</li>
+                    <li>Cinema 4D</li>
+                    <li>Houdini</li>
+                    <li>Moho</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Game Engines</h3>
+                <ul>
+                    <li>Unity</li>
+                    <li>Unreal Engine</li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:nomaneon00@gmail.com">nomaneon00@gmail.com</a></p>
-    </section>
+        <section id="memberships">
+            <h2>Professional Memberships</h2>
+            <ul>
+                <li>American Physical Society (APS)</li>
+                <li>American Psychological Association (APA)</li>
+                <li>Association for Computing Machinery (ACM)</li>
+                <li>American Mathematical Society (AMS)</li>
+                <li>International Society for Data Science and Analytics (ISDSA)</li>
+                <li>Royal Society of Statisticians (RSS)</li>
+                <li>Society for Applied and Industrial Mathematics (SIAM)</li>
+            </ul>
+        </section>
 
-    <section id="blog" class="blog">
-        <h2>Blog Posts</h2>
-        <ul>
-            <li><a href="#">Blog Post 1 Title</a> - Brief description of Blog Post 1.</li>
-            <li><a href="#">Blog Post 2 Title</a> - Brief description of Blog Post 2.</li>
-            <li><a href="#">Blog Post 3 Title</a> - Brief description of Blog Post 3.</li>
-        </ul>
-    </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:nomaneon00@gmail.com">nomaneon00@gmail.com</a></p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2>Blog Posts</h2>
+            <div class="blog-posts">
+                <!-- Blog posts will be dynamically added here -->
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2024 Noman Bin Morshed. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
