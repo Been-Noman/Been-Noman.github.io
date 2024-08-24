@@ -9,6 +9,11 @@
 </head>
 <body>
     <header>
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        </button>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -112,5 +117,60 @@
     </footer>
 
     <script src="script.js"></script>
+    <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-filter">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="web">Web Development</button>
+        <button data-filter="data">Data Science</button>
+        <button data-filter="animation">Animation</button>
+    </div>
+    <div class="projects-grid">
+        <div class="project" data-category="web">
+            <img src="project1-thumbnail.jpg" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>Description of Project 1</p>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project" data-category="data">
+            <img src="project2-thumbnail.jpg" alt="Project 2">
+            <h3>Project 2</h3>
+            <p>Description of Project 2</p>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project" data-category="animation">
+            <img src="project3-thumbnail.jpg" alt="Project 3">
+            <h3>Project 3</h3>
+            <p>Description of Project 3</p>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+        <!-- Add more project items as needed -->
+        </div>
+        </section>
+    <section id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial-carousel">
+        <div class="testimonial active">
+            <blockquote>
+                "Noman is an exceptional student with a keen mind for problem-solving."
+            </blockquote>
+            - Prof. John Doe, University of Dhaka
+        </div>
+        <div class="testimonial">
+            <blockquote>
+                "His dedication to learning and ability to grasp complex concepts is impressive."
+            </blockquote>
+            - Dr. Jane Smith, Research Supervisor
+        </div>
+        <div class="testimonial">
+            <blockquote>
+                "Noman's enthusiasm for teaching makes him a favorite among younger students."
+            </blockquote>
+            - Mr. Robert Johnson, Academic Care Director
+        </div>
+    </div>
+    <button class="testimonial-prev">&lt;</button>
+    <button class="testimonial-next">&gt;</button>
+</section>
 </body>
 </html>
