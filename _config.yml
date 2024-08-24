@@ -1,4 +1,39 @@
-theme: minima
-title: Welcome to Noman's Bin. Ready for some adventure? Lessggo
-author: Noman Bin Morshed
-description: A minimal site from a minimalistic person
+# Site Settings
+title: Noman Bin Morshed - Portfolio
+description: Personal portfolio of Noman Bin Morshed, Nuclear Engineering Student and Aspiring Computer Scientist
+url: "https://nomanmorshed.github.io"
+baseurl: ""
+
+# Author Information
+author:
+  name: Noman Bin Morshed
+  email: nomaneon00@gmail.com
+
+# Social Media Links
+social:
+  github: ""
+  linkedin: ""
+  twitter: ""
+
+# Build Settings
+markdown: kramdown
+permalink: /:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  blog:
+    output: true
+    permalink: /blog/:path/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
