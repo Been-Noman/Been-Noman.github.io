@@ -72,6 +72,7 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     margin-top: 7rem;
+    backdrop-filter: blur(5px);
 }
 
 section h2 {
@@ -82,14 +83,19 @@ section h2 {
     padding-bottom: 0.5rem;
 }
 
-.about-me p,
-.skills p,
-.contact p,
-.blog p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+.about-me {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
 }
 
+.about-me p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #f0f0f0;
+}
+
+/* Skills Section */
 .skills ul {
     list-style-type: none;
     padding: 0;
