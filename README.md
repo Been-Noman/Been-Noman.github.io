@@ -7,11 +7,11 @@
 
 <p align="left"> <a href="https://twitter.com/bin_shaded" target="blank"><img src="https://img.shields.io/twitter/follow/bin_shaded?logo=twitter&style=for-the-badge" alt="bin_shaded" /></a> </p>
 
-- 🔭 I’m currently working on **Energy Systems Modeling**
+- 🔭 I’m currently working on **Energy System Modeling**
 
-- 🌱 I’m currently learning **JavaScript, R, Julia, LISP, Lean**
+- 🌱 I’m currently learning **Python, C++, JavaScript, R, Julia, LISP, Lean**
 
-- 👯 I’m looking to collaborate on **Machine Learning, Game AI, Physics Engine, Vfx projects**
+- 👯 I’m looking forward to collaborating on **Machine Learning, Game AI, Physics Engine, VFX, Simulations**
 
 - 🤝 I’m looking for help with **research on machine learning, information theory, quantum information theory.**
 
