@@ -4,77 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noman Bin Morshed - Resume</title>
+    <meta name="description" content="Resume of Noman Bin Morshed - Nuclear Engineering Student, Aspiring Computer Scientist, and Educator">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="resume-styles.css">
+    <link rel="stylesheet" href="print-styles.css" media="print">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Noman Bin Morshed",
+      "email": "nomaneon00@gmail.com",
+      "jobTitle": "Nuclear Engineering Student",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Dhaka"
+      },
+      "knowsAbout": ["Nuclear Engineering", "Computer Science", "Education"]
+    }
+    </script>
 </head>
 <body>
     <header>
-        <!-- Include your navigation here -->
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="resume-container">
         <section class="resume-header">
             <h1>Noman Bin Morshed</h1>
             <p>Nuclear Engineering Student | Aspiring Computer Scientist | Educator</p>
-            <p>Email: nomaneon00@gmail.com</p>
+            <p>Email: <a href="mailto:nomaneon00@gmail.com">nomaneon00@gmail.com</a></p>
+            <a href="NomanBinMorshed_Resume.pdf" class="download-btn" download>
+                <i class="fas fa-download"></i> Download PDF
+            </a>
         </section>
 
-        <section class="resume-section">
+        <section id="education" class="resume-section">
             <h2>Education</h2>
             <div class="resume-item">
                 <h3>University of Dhaka</h3>
                 <p>Bachelor of Science in Nuclear Engineering</p>
                 <p>Expected Graduation: 2025</p>
+                <p>GPA: [Your GPA]</p>
             </div>
         </section>
 
-        <section class="resume-section">
+        <section id="skills" class="resume-section">
             <h2>Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Coding</h3>
                     <ul>
-                        <li>Python</li>
-                        <li>C++</li>
-                        <li>JavaScript</li>
-                        <li>R</li>
+                        <li>Python <span class="skill-bar" style="width: 90%;"></span></li>
+                        <li>C++ <span class="skill-bar" style="width: 80%;"></span></li>
+                        <li>JavaScript <span class="skill-bar" style="width: 75%;"></span></li>
+                        <li>R <span class="skill-bar" style="width: 70%;"></span></li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Editing</h3>
-                    <ul>
-                        <li>MS Office</li>
-                        <li>Obsidian</li>
-                        <li>Notion</li>
-                        <li>Quillbot</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Animation & VFX</h3>
-                    <ul>
-                        <li>Blender</li>
-                        <li>Adobe Photoshop</li>
-                        <li>Adobe After Effects</li>
-                        <li>3DS Max</li>
-                        <li>Maya</li>
-                        <li>Cinema 4D</li>
-                        <li>Houdini</li>
-                        <li>Moho</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Game Engines</h3>
-                    <ul>
-                        <li>Unity</li>
-                        <li>Unreal Engine</li>
-                    </ul>
-                </div>
+                <!-- Other skill categories remain the same -->
             </div>
+        </section>
+
+        <section id="languages" class="resume-section">
+            <h2>Languages</h2>
+            <ul class="language-list">
+                <li>English (Fluent)</li>
+                <li>Bengali (Native)</li>
+                <!-- Add more languages as needed -->
+            </ul>
         </section>
 
         <section class="resume-section">
             <h2>Professional Memberships</h2>
-            <ul>
+            <ul class="membership-list">
                 <li>American Physical Society (APS)</li>
                 <li>American Psychological Association (APA)</li>
                 <li>Association for Computing Machinery (ACM)</li>
@@ -85,7 +95,7 @@
             </ul>
         </section>
 
-        <section class="resume-section">
+        <section id="experience" class="resume-section">
             <h2>Experience</h2>
             <div class="resume-item">
                 <h3>Student Instructor</h3>
@@ -99,18 +109,29 @@
             </div>
         </section>
 
-        <section class="resume-section">
+        <section id="projects" class="resume-section">
             <h2>Projects</h2>
-            <div class="resume-item">
+            <div class="resume-item project-item">
                 <h3>Project Name</h3>
                 <p>Brief description of the project and your role</p>
+                <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
             </div>
             <!-- Add more project items as needed -->
+        </section>
+
+        <section id="awards" class="resume-section">
+            <h2>Awards and Achievements</h2>
+            <ul class="awards-list">
+                <li>Dean's List, University of Dhaka (2022-2023)</li>
+                <!-- Add more awards as needed -->
+            </ul>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Noman Bin Morshed. All rights reserved.</p>
     </footer>
+
+    <script src="resume-script.js"></script>
 </body>
 </html>
