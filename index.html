@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Academic portfolio of Noman Bin Morshed, Nuclear Engineering graduate from the University of Dhaka with interests in quantum optimization, quantum simulations, nuclear engineering, fusion, plasma physics, quantum sensing, and computational materials science." />
+  <meta name="author" content="Noman Bin Morshed" />
+  <meta property="og:title" content="Noman Bin Morshed | Academic Portfolio" />
+  <meta property="og:description" content="Nuclear Engineering graduate focused on quantum optimization, quantum simulations, nuclear fuel loading optimization, and computational materials science." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://Been-Noman.github.io/" />
+  <title>Noman Bin Morshed | Academic Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="#top" class="brand" aria-label="Noman Bin Morshed home">NBM</a>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-pad">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Nuclear Engineering · Quantum Computing · Scientific Computing</p>
+          <h1>Noman Bin Morshed</h1>
+          <h2>Nuclear Engineering Graduate, University of Dhaka</h2>
+          <p class="hero-text">
+            I am a nuclear engineering graduate interested in quantum optimization, quantum simulations,
+            quantum materials, quantum sensing, plasma physics, and fusion engineering. My work connects
+            nuclear engineering problems with quantum-inspired algorithms, deep-learning surrogate models,
+            and high-performance scientific simulation.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="assets/docs/Noman_Bin_Morshed_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+            <a class="btn secondary" href="#research">View Research</a>
+          </div>
+          <div class="social-row" aria-label="Professional links">
+            <a href="mailto:nomaneon00@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/noman-bin-morshed-733143329" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/Been-Noman" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Profile snapshot">
+          <div class="profile-placeholder">NBM</div>
+          <h3>Research Focus</h3>
+          <ul class="check-list">
+            <li>Quantum optimization for nuclear systems</li>
+            <li>Quantum and Monte Carlo simulations</li>
+            <li>Computational nuclear materials</li>
+            <li>Plasma physics and fusion engineering</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section-pad alt-bg">
+      <div class="container two-col">
+        <div>
+          <p class="section-label">About</p>
+          <h2>Academic Profile</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            I hold a B.Sc. in Nuclear Engineering from the University of Dhaka. My academic interests are centered on
+            quantum technologies and computational methods for nuclear engineering, including quantum optimization,
+            quantum simulation, quantum material science, quantum sensing, plasma physics, and fusion engineering.
+          </p>
+          <p>
+            I am especially interested in problems where physical modeling, quantum-inspired search, and machine learning
+            can jointly improve the efficiency of complex engineering design and simulation workflows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section-pad">
+      <div class="container">
+        <p class="section-label">Education</p>
+        <h2>Education</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <h3>B.Sc. in Nuclear Engineering</h3>
+              <p class="meta">Department of Nuclear Engineering, University of Dhaka</p>
+              <p>
+                Key areas: nuclear physics, quantum mechanics, nuclear instrumentation, numerical methods,
+                MATLAB modeling, nanoscience, nuclear fusion, statistics, and computer programming.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section-pad alt-bg">
+      <div class="container">
+        <p class="section-label">Research</p>
+        <h2>Research Interests</h2>
+        <div class="pill-grid">
+          <span>Quantum Optimization</span>
+          <span>Quantum Simulations</span>
+          <span>Quantum Material Science</span>
+          <span>Quantum Sensing</span>
+          <span>Plasma Physics</span>
+          <span>Fusion Engineering</span>
+          <span>Nuclear Fuel Loading Optimization</span>
+          <span>Computational Materials Science</span>
+        </div>
+
+        <div class="project-grid research-grid">
+          <article class="project-card featured">
+            <p class="tag">Current Research</p>
+            <h3>Simulated Quantum Annealing–Genetic Algorithm Framework for Nuclear Fuel Loading Optimization</h3>
+            <ul>
+              <li>Developed a three-layer hybrid framework integrating quantum-inspired metaheuristics, deep-learning surrogate modeling, and evolutionary search for PWR fuel loading optimization.</li>
+              <li>Formulated multi-constraint fuel reloading placement as a 579-variable QUBO problem using PyQUBO and Simulated Quantum Annealing.</li>
+              <li>Trained a multi-output residual CNN surrogate with positional encoding and squeeze-and-excitation attention on 10,000 OpenMC Monte Carlo simulations.</li>
+              <li>Accelerated GA-based fitness evaluation from approximately 12 hours to under a second while targeting reduced peak power factors.</li>
+            </ul>
+          </article>
+
+          <article class="project-card featured">
+            <p class="tag">Current Research</p>
+            <h3>Quantum-Mechanical Study of the Electronic Properties of U<sub>x</sub>Pu<sub>y</sub>O<sub>z</sub> Compounds</h3>
+            <ul>
+              <li>Conducted first-principles DFT simulations using Quantum ESPRESSO for uranium-based mixed oxides.</li>
+              <li>Calculated and benchmarked total energy, band gap, DOS/PDOS, stress, and force parameters.</li>
+              <li>Studied structure–property relationships to identify materials with promising mechanical and electronic performance.</li>
+              <li>Compared simulation outcomes with literature data for validation and benchmarking.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section-pad">
+      <div class="container">
+        <p class="section-label">Publications</p>
+        <h2>Publications & Manuscripts</h2>
+        <div class="content-card">
+          <p><strong>Status:</strong> Publications are currently in preparation.</p>
+          <ul class="publication-list">
+            <li><span>Manuscript in preparation:</span> Simulated Quantum Annealing–Genetic Algorithm Framework for Nuclear Fuel Loading Optimization.</li>
+            <li><span>Manuscript in preparation:</span> Quantum-Mechanical Study of the Electronic Properties of U<sub>x</sub>Pu<sub>y</sub>O<sub>z</sub> Compounds.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section-pad alt-bg">
+      <div class="container">
+        <p class="section-label">Projects</p>
+        <h2>Selected Projects</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <p class="tag">Quantum Computing</p>
+            <h3>Quantum Galton Board</h3>
+            <p>
+              Built Qiskit-based quantum circuits for normal, exponential, and Hadamard walk distributions inspired by
+              the Universal Statistical Simulator framework. The implementation uses Pauli-X initialization, amplitude
+              control, CSWAP routing, ancilla-assisted diffusion, noisy backend modeling, and transpilation optimization.
+            </p>
+            <p class="result-note">Reported high fidelities for smaller circuits and robust distribution alignment under IBM FakeGeneva noise models.</p>
+            <a class="text-link" href="https://github.com/Been-Noman/Quantum_Galton_Board.git" target="_blank" rel="noopener">View repository →</a>
+          </article>
+
+          <article class="project-card">
+            <p class="tag">NDT / Nuclear Engineering</p>
+            <h3>Eddy Current Testing</h3>
+            <p>
+              Trained at the NDT division of the Atomic Energy Centre, Dhaka, applying electromagnetic testing principles
+              for material sorting, coating thickness measurement, and surface or near-surface discontinuity detection.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <p class="tag">NDT / Materials</p>
+            <h3>Magnetic Particle Testing</h3>
+            <p>
+              Studied magnetization methods and ferromagnetic defect detection techniques with an emphasis on the links
+              between magnetism, metallurgy, and materials integrity assessment.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <p class="tag">NDT / Radiation</p>
+            <h3>Radiographic Testing of Welded Metal</h3>
+            <p>
+              Used film-based and digital radiographic techniques with X-ray and gamma-ray sources to identify internal
+              discontinuities and inspect welded materials according to engineering standards.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <p class="tag">NDT / Ultrasound</p>
+            <h3>Ultrasonic Testing</h3>
+            <p>
+              Worked with ultrasound transmission, reflection, piezoelectric transducers, couplants, and material science
+              principles for detecting defects in steel, concrete, and other structural materials.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section-pad">
+      <div class="container">
+        <p class="section-label">Experience</p>
+        <h2>Teaching & Professional Experience</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <h3>Physics and Mathematics Instructor</h3>
+              <p class="meta">4 years · Secondary and higher secondary students</p>
+              <p>
+                Taught mathematics and physics to school and college-level students, focusing on conceptual clarity,
+                problem-solving methods, and exam-oriented preparation.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <h3>Industrial Training in Nondestructive Testing</h3>
+              <p class="meta">Atomic Energy Centre, Dhaka / Bangladesh Atomic Energy Commission</p>
+              <p>
+                Gained hands-on exposure to eddy current testing, magnetic particle testing, radiographic testing,
+                ultrasonic testing, nuclear material characterization, and NDE workflows.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-body">
+              <h3>Qiskit Advocate Training</h3>
+              <p class="meta">IBM Quantum · Remote</p>
+              <p>
+                Completed Qiskit Advocate training and IBM Quantum Learning activities related to quantum algorithms,
+                circuit construction, and noise-aware simulation.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section-pad alt-bg">
+      <div class="container">
+        <p class="section-label">Skills</p>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Quantum & Simulation</h3>
+            <p>D-Wave, OpenJij, OpenMC, PennyLane, Qiskit, Quantum ESPRESSO</p>
+          </article>
+          <article class="skill-card">
+            <h3>Programming & Tools</h3>
+            <p>Python, MATLAB, C++, Git, Linux, Jupyter Notebook</p>
+          </article>
+          <article class="skill-card">
+            <h3>Engineering & Modeling</h3>
+            <p>ANSYS HFSS, KiCad, PyGAD, TensorFlow</p>
+          </article>
+          <article class="skill-card">
+            <h3>Languages</h3>
+            <p>Bangla, English</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section-pad">
+      <div class="container">
+        <p class="section-label">Certifications</p>
+        <h2>Selected Certifications & Coursework</h2>
+        <div class="cert-grid">
+          <article class="cert-card"><h3>Qureca Adequate Course</h3><p>QURECA · Issued May 2026 · Credential ID 4077-177-996-6031</p></article>
+          <article class="cert-card"><h3>Introduction to Nuclear Engineering</h3><p>Chalmers University of Technology · Issued Apr 2026</p></article>
+          <article class="cert-card"><h3>Machine Learning for Earth Systems Modelling</h3><p>ECMWF · Issued Apr 2026</p></article>
+          <article class="cert-card"><h3>QSilver36</h3><p>QWorld · Issued Mar 2026 · Credential ID QSilver36-2</p></article>
+          <article class="cert-card"><h3>Quantum Sensing Workshop</h3><p>QWorld · Issued Nov 2025 · Credential ID Quantum Sensing Workshop 1-12</p></article>
+          <article class="cert-card"><h3>QCobalt</h3><p>QWorld · Issued Nov 2025 · Credential ID QCobalt8-27</p></article>
+          <article class="cert-card"><h3>QML Workshop2</h3><p>Fundacja Quantum AI · Issued Oct 2025</p></article>
+          <article class="cert-card"><h3>Quantum Walks and Monte Carlo</h3><p>Washington Institute for STEM, Entrepreneurship and Research · Issued Aug 2025</p></article>
+          <article class="cert-card"><h3>Fundamentals of Quantum Algorithms</h3><p>IBM · Issued Aug 2025</p></article>
+          <article class="cert-card"><h3>2025 Quantum Program</h3><p>Washington Institute for STEM, Entrepreneurship and Research · Issued Aug 2025</p></article>
+          <article class="cert-card"><h3>Basics of Quantum Information</h3><p>IBM · Issued Aug 2025</p></article>
+          <article class="cert-card"><h3>MTV Nuclear Engineering Summer School 2025</h3><p>University of Michigan · Issued Aug 2025</p></article>
+          <article class="cert-card"><h3>Quantum Algorithms for Nonlinear Problems</h3><p>Washington Institute for STEM, Entrepreneurship and Research · Issued Aug 2025</p></article>
+          <article class="cert-card"><h3>PennyLane Trotterization Challenge</h3><p>PennyLane · Issued Aug 2025</p></article>
+          <article class="cert-card"><h3>Quantum Algorithms to Solve PDEs</h3><p>Washington Institute for STEM, Entrepreneurship and Research · Issued Aug 2025</p></article>
+          <article class="cert-card"><h3>PennyLane LCU Challenge</h3><p>PennyLane · Issued Jul 2025</p></article>
+          <article class="cert-card"><h3>QBronze Using Qiskit</h3><p>QWorld · Issued Jul 2025 · Credential ID QBronze169-38</p></article>
+          <article class="cert-card"><h3>Introducing Generative AI with AWS</h3><p>Udacity · Issued Dec 2024</p></article>
+          <article class="cert-card"><h3>Problem Solving Basic</h3><p>HackerRank Campus Club, AUFS · Issued Dec 2024</p></article>
+          <article class="cert-card"><h3>Python Basic</h3><p>HackerRank · Issued Dec 2024</p></article>
+          <article class="cert-card"><h3>Discovering Quantum Computing</h3><p>Udacity · Issued Jun 2024</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-pad contact-section">
+      <div class="container contact-card">
+        <p class="section-label">Contact</p>
+        <h2>Get in Touch</h2>
+        <p>
+          I am open to academic collaboration, research opportunities, graduate research positions, and projects related to
+          quantum computing, nuclear engineering, computational materials science, plasma physics, and fusion engineering.
+        </p>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:nomaneon00@gmail.com">Email Me</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/noman-bin-morshed-733143329" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn secondary" href="https://github.com/Been-Noman" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Noman Bin Morshed. All rights reserved.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
