@@ -46,6 +46,11 @@ a {
 
 p {
   margin: 0 0 1rem;
+  text-align: justify;
+}
+
+li {
+  text-align: justify;
 }
 
 .container {
@@ -153,6 +158,7 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.78rem;
+  text-align: left;
 }
 
 .hero h1 {
@@ -275,6 +281,7 @@ p {
   position: relative;
   padding-left: 28px;
   margin: 12px 0;
+  text-align: left;
 }
 
 .check-list li::before {
@@ -350,6 +357,7 @@ h3 {
   color: var(--accent);
   font-weight: 800;
   margin-bottom: 12px;
+  text-align: left;
 }
 
 .pill-grid {
