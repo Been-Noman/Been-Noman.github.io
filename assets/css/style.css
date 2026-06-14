@@ -179,6 +179,7 @@ li {
   max-width: 760px;
   color: var(--muted);
   font-size: 1.1rem;
+  text-align: justify; /* Main dense text stays justified */
 }
 
 .hero-actions,
@@ -318,6 +319,41 @@ h3 {
   padding: 32px;
 }
 
+/* =========================
+   NO JUSTIFY FOR SKILLS, CERTS, PROJECTS, TIMELINE & OTHER CARDS
+   ========================= */
+.skill-card p,
+.cert-card p,
+.cert-card h3,
+.project-card p,
+.project-card li,
+.timeline-body p,
+.timeline-body li,
+.content-card p,
+.publication-list,
+.publication-list li,
+.result-note,
+.result-note p {
+  text-align: left !important;
+  hyphens: none;
+  word-spacing: normal;
+  letter-spacing: normal;
+}
+
+.project-card h3,
+.skill-card h3,
+.cert-card h3,
+.timeline-body h3,
+.content-card h3 {
+  text-align: left;
+}
+
+/* Keep main prose justified */
+.hero-text,
+p:not(.skill-card p):not(.cert-card p):not(.project-card p):not(.timeline-body p) {
+  text-align: justify;
+}
+
 .timeline {
   position: relative;
   display: grid;
@@ -409,44 +445,13 @@ h3 {
 .content-card p,
 .timeline-body p {
   color: var(--muted);
-  text-align: justify;
-}
-
-.project-card li,
-.publication-list li,
-.check-list li,
-.timeline-body li {
-  text-align: justify;
-}
-
-.hero-text {
-  text-align: justify;
-}
-
-.result-note {
-  padding: 14px;
-  border-left: 4px solid var(--primary);
-  background: var(--surface-soft);
-  border-radius: 12px;
+  text-align: left; /* overridden by the block above */
 }
 
 .publication-list {
   margin: 0;
   padding-left: 1.2rem;
   color: var(--muted);
-}
-
-/* =========================
-   NO JUSTIFY FOR SKILLS & CERTS
-   ========================= */
-
-.skill-card p,
-.cert-card p,
-.cert-card h3 {
-  text-align: left;
-  hyphens: none;
-  word-spacing: normal;
-  letter-spacing: normal;
 }
 
 .publication-list span {
@@ -526,6 +531,7 @@ h3 {
   margin: 0;
 }
 
+/* Responsive */
 @media (max-width: 940px) {
   .hero-grid,
   .two-col,
@@ -534,15 +540,12 @@ h3 {
   .cert-grid {
     grid-template-columns: 1fr;
   }
-
   .hero {
     padding-top: 92px;
   }
-
   .nav-toggle {
     display: block;
   }
-
   .nav-links {
     position: fixed;
     inset: 74px 20px auto 20px;
@@ -558,25 +561,20 @@ h3 {
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
   }
-
   .nav-links a {
     padding: 12px;
   }
-
   .nav-links.open {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
   }
-
   .nav-toggle.open span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
   }
-
   .nav-toggle.open span:nth-child(2) {
     opacity: 0;
   }
-
   .nav-toggle.open span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
   }
@@ -586,15 +584,12 @@ h3 {
   .container {
     width: min(100% - 28px, 1120px);
   }
-
   .section-pad {
     padding: 68px 0;
   }
-
   .hero h1 {
     font-size: clamp(2.7rem, 16vw, 4.4rem);
   }
-
   .hero-card,
   .content-card,
   .project-card,
@@ -602,7 +597,6 @@ h3 {
     padding: 24px;
     border-radius: 22px;
   }
-
   .footer-grid {
     flex-direction: column;
     align-items: flex-start;
