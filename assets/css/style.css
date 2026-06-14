@@ -44,59 +44,13 @@ a {
   text-decoration: none;
 }
 
-/* =========================
-   GLOBAL TYPOGRAPHY FIX
-   ========================= */
-
 p {
   margin: 0 0 1rem;
   text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  word-spacing: 0.02em;
-  letter-spacing: 0.01em;
 }
 
 li {
   text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-}
-
-/* Prevent ugly justification in UI components */
-h1, h2, h3, h4, h5, h6,
-.nav-links,
-.brand,
-.btn,
-.meta,
-.section-label,
-.tag {
-  text-align: left;
-  hyphens: none;
-  letter-spacing: normal;
-}
-
-/* Specific content containers */
-.hero-text,
-.content-card p,
-.project-card p,
-.skill-card p,
-.cert-card p,
-.timeline-body p {
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-  word-spacing: 0.02em;
-}
-
-/* Prevent extreme spacing in narrow cards */
-.hero-text,
-.timeline-body,
-.project-card p,
-.content-card p {
-  max-width: 100%;
 }
 
 .container {
@@ -392,6 +346,13 @@ h3 {
   border-radius: var(--radius-md);
 }
 
+.timeline-body h3,
+.project-card h3,
+.skill-card h3,
+.cert-card h3 {
+  margin: 0 0 8px;
+}
+
 .meta {
   color: var(--accent);
   font-weight: 800;
@@ -451,10 +412,15 @@ h3 {
   text-align: justify;
 }
 
-.publication-list {
-  margin: 0;
-  padding-left: 1.2rem;
-  color: var(--muted);
+.project-card li,
+.publication-list li,
+.check-list li,
+.timeline-body li {
+  text-align: justify;
+}
+
+.hero-text {
+  text-align: justify;
 }
 
 .result-note {
@@ -462,6 +428,30 @@ h3 {
   border-left: 4px solid var(--primary);
   background: var(--surface-soft);
   border-radius: 12px;
+}
+
+.publication-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+/* =========================
+   NO JUSTIFY FOR SKILLS & CERTS
+   ========================= */
+
+.skill-card p,
+.cert-card p,
+.cert-card h3 {
+  text-align: left;
+  hyphens: none;
+  word-spacing: normal;
+  letter-spacing: normal;
+}
+
+.publication-list span {
+  color: var(--text);
+  font-weight: 800;
 }
 
 .skills-grid {
@@ -486,6 +476,15 @@ h3 {
   box-shadow: none;
 }
 
+.cert-card h3 {
+  font-size: 1rem;
+}
+
+.cert-card p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
 .contact-section {
   background: linear-gradient(135deg, #0f172a 0%, #164e63 50%, #0f766e 100%);
 }
@@ -496,6 +495,17 @@ h3 {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(18px);
+}
+
+.contact-card .section-label,
+.contact-card p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.contact-card .btn.secondary {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
 .site-footer {
@@ -512,9 +522,9 @@ h3 {
   align-items: center;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+.footer-grid p {
+  margin: 0;
+}
 
 @media (max-width: 940px) {
   .hero-grid,
@@ -525,8 +535,50 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .hero {
+    padding-top: 92px;
+  }
+
   .nav-toggle {
     display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: 74px 20px auto 20px;
+    display: grid;
+    gap: 0;
+    padding: 14px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .nav-links a {
+    padding: 12px;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 }
 
