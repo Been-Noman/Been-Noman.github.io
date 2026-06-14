@@ -409,6 +409,18 @@ h3 {
 .content-card p,
 .timeline-body p {
   color: var(--muted);
+  text-align: justify;
+}
+
+.project-card li,
+.publication-list li,
+.check-list li,
+.timeline-body li {
+  text-align: justify;
+}
+
+.hero-text {
+  text-align: justify;
 }
 
 .result-note {
