@@ -31,8 +31,14 @@ body {
   line-height: 1.65;
 }
 
-body.nav-open {
-  overflow: hidden;
+/* DEFAULT TEXT ALIGNMENT (SAFE BASELINE) */
+p {
+  margin: 0 0 1rem;
+  text-align: left;
+}
+
+li {
+  text-align: left;
 }
 
 img, svg {
@@ -42,16 +48,6 @@ img, svg {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-/* DEFAULT PARAGRAPH BEHAVIOR (JUSTIFIED FOR MAIN CONTENT ONLY) */
-p {
-  margin: 0 0 1rem;
-  text-align: justify;
-}
-
-li {
-  text-align: justify;
 }
 
 /* CONTAINER */
@@ -78,6 +74,7 @@ li {
   backdrop-filter: blur(18px);
 }
 
+/* NAV */
 .nav {
   display: flex;
   align-items: center;
@@ -95,22 +92,6 @@ li {
   background: linear-gradient(135deg, var(--primary), var(--accent));
   color: #fff;
   font-weight: 800;
-  letter-spacing: -0.04em;
-  box-shadow: 0 10px 30px rgba(15, 118, 110, 0.28);
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  color: var(--muted);
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-.nav-links a:hover,
-.nav-links a:focus-visible {
-  color: var(--primary);
 }
 
 /* HERO */
@@ -131,6 +112,7 @@ li {
   align-items: center;
 }
 
+/* ONLY HERO TEXT CAN BE JUSTIFIED */
 .hero-text {
   max-width: 760px;
   color: var(--muted);
@@ -151,45 +133,37 @@ li {
   box-shadow: var(--shadow);
 }
 
-/* TIMELINE / PROJECT TEXT */
+/* =========================
+   TEXT-RICH SECTIONS (JUSTIFIED)
+   ========================= */
+
 .timeline-body p,
 .project-card p,
-.content-card p {
+.content-card p,
+.publication-list,
+.result-note {
   text-align: justify;
-  color: var(--muted);
 }
 
 /* =========================
-   IMPORTANT FIX: SKILLS + CERTIFICATIONS (NO JUSTIFY)
+   SKILLS + CERTIFICATIONS (CLEAN UI ALIGNMENT)
    ========================= */
 
-/* Disable justification completely */
-.skills-grid p,
-.skills-grid li,
-.skills-grid *,
 .skill-card p,
-.skill-card li {
-  text-align: left !important;
-  justify-content: flex-start;
-}
-
-/* Certifications fix */
-.cert-grid p,
-.cert-grid li,
-.cert-grid *,
+.skill-card h3,
+.skill-card li,
 .cert-card p,
-.cert-card li,
-.cert-card h3 {
-  text-align: left !important;
+.cert-card h3,
+.cert-card li {
+  text-align: left;
 }
 
-/* remove stretched spacing issues */
+/* Prevent awkward spacing in UI cards */
 .skill-card,
 .cert-card {
-  text-align: left;
-  hyphens: none;
   word-spacing: normal;
   letter-spacing: normal;
+  hyphens: none;
 }
 
 /* HEADINGS */
@@ -200,7 +174,11 @@ h2 {
   letter-spacing: -0.055em;
 }
 
-/* GRID FIXES */
+h3 {
+  line-height: 1.25;
+}
+
+/* GRIDS */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -211,6 +189,25 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+/* TIMELINE */
+.timeline {
+  display: grid;
+  gap: 24px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 20px;
+}
+
+.timeline-body {
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
 }
 
 /* FOOTER */
