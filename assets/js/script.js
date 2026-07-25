@@ -16,12 +16,8 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const safeStorage = {
-    get(key) {
-      try { return localStorage.getItem(key); } catch { return null; }
-    },
-    set(key, value) {
-      try { localStorage.setItem(key, value); } catch { /* private mode */ }
-    }
+    get(key) { try { return localStorage.getItem(key); } catch { return null; } },
+    set(key, value) { try { localStorage.setItem(key, value); } catch { /* private mode */ } }
   };
 
   const storedTheme = safeStorage.get('portfolio-theme');
@@ -55,27 +51,25 @@
 
   if (year) year.textContent = new Date().getFullYear();
 
+  const currentPage = body.dataset.page || 'home';
+  navItems.forEach((link) => link.classList.toggle('active', link.dataset.pageLink === currentPage));
+
   const closeNavigation = () => {
     navLinks?.classList.remove('open');
     navToggle?.classList.remove('open');
     navToggle?.setAttribute('aria-expanded', 'false');
     body.classList.remove('nav-open');
   };
-
   navToggle?.addEventListener('click', () => {
     const isOpen = navLinks?.classList.toggle('open');
     navToggle.classList.toggle('open', Boolean(isOpen));
     navToggle.setAttribute('aria-expanded', String(Boolean(isOpen)));
     body.classList.toggle('nav-open', Boolean(isOpen));
   });
-
   navItems.forEach((item) => item.addEventListener('click', closeNavigation));
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeNavigation();
-  });
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeNavigation(); });
   document.addEventListener('click', (event) => {
-    if (!navLinks?.classList.contains('open')) return;
-    if (!event.target.closest('.nav')) closeNavigation();
+    if (navLinks?.classList.contains('open') && !event.target.closest('.nav')) closeNavigation();
   });
 
   const updateScrollUI = () => {
@@ -88,21 +82,9 @@
   updateScrollUI();
   window.addEventListener('scroll', updateScrollUI, { passive: true });
 
-  const sections = [...document.querySelectorAll('main > section[id]')];
   if ('IntersectionObserver' in window) {
-    const sectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const id = entry.target.id;
-        navItems.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${id}`));
-      });
-    }, { rootMargin: '-35% 0px -55%', threshold: 0 });
-    sections.forEach((section) => sectionObserver.observe(section));
-
     const reveals = [...document.querySelectorAll('.reveal')];
-    reveals.forEach((element, index) => {
-      element.style.setProperty('--reveal-delay', `${Math.min(index % 4, 3) * 70}ms`);
-    });
+    reveals.forEach((element, index) => element.style.setProperty('--reveal-delay', `${Math.min(index % 4, 3) * 70}ms`));
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -116,7 +98,7 @@
     document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible'));
   }
 
-  const spotlightCards = document.querySelectorAll('.hero-card, .content-card, .project-card, .skill-card, .cert-card, .timeline-body');
+  const spotlightCards = document.querySelectorAll('.hero-card, .content-card, .project-card, .skill-card, .cert-card, .timeline-body, .directory-card');
   spotlightCards.forEach((card) => {
     card.addEventListener('pointermove', (event) => {
       const rect = card.getBoundingClientRect();
@@ -132,6 +114,24 @@
     certToggle.textContent = collapsed ? 'Show fewer certifications' : 'Show all certifications';
   });
 
+  // Smooth fallback transition for links between local HTML pages.
+  const isPlainLeftClick = (event) => event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
+  document.querySelectorAll('a[href]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      if (reduceMotion || !isPlainLeftClick(event) || link.target || link.hasAttribute('download')) return;
+      const url = new URL(link.href, window.location.href);
+      if (url.origin !== window.location.origin) return;
+      const sameDocument = url.pathname === window.location.pathname;
+      if (sameDocument && url.hash) return;
+      if (!/\.html$/.test(url.pathname) && !url.pathname.endsWith('/')) return;
+      event.preventDefault();
+      closeNavigation();
+      body.classList.add('page-leaving');
+      window.setTimeout(() => { window.location.href = url.href; }, 430);
+    });
+  });
+  window.addEventListener('pageshow', () => body.classList.remove('page-leaving'));
+
   const canvas = document.getElementById('particle-canvas');
   const ctx = canvas?.getContext('2d');
   let particles = [];
@@ -139,11 +139,7 @@
   let width = 0;
   let height = 0;
   let dpr = 1;
-
-  const getParticleColor = () => {
-    const style = getComputedStyle(root);
-    return style.getPropertyValue('--primary-rgb').trim() || '91, 75, 245';
-  };
+  const getParticleColor = () => getComputedStyle(root).getPropertyValue('--primary-rgb').trim() || '91, 75, 245';
   let particleColor = getParticleColor();
   document.addEventListener('appearancechange', () => { particleColor = getParticleColor(); });
 
@@ -159,10 +155,8 @@
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     const count = Math.max(18, Math.min(52, Math.floor(width / 28)));
     particles = Array.from({ length: count }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.16,
-      vy: (Math.random() - 0.5) * 0.16,
+      x: Math.random() * width, y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.16, vy: (Math.random() - 0.5) * 0.16,
       r: Math.random() * 1.5 + 0.35
     }));
   };
@@ -172,30 +166,23 @@
     ctx.clearRect(0, 0, width, height);
     for (let i = 0; i < particles.length; i += 1) {
       const p = particles[i];
-      p.x += p.vx;
-      p.y += p.vy;
+      p.x += p.vx; p.y += p.vy;
       if (p.x < -10) p.x = width + 10;
       if (p.x > width + 10) p.x = -10;
       if (p.y < -10) p.y = height + 10;
       if (p.y > height + 10) p.y = -10;
-
       ctx.beginPath();
       ctx.fillStyle = `rgba(${particleColor}, .32)`;
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
       ctx.fill();
-
       for (let j = i + 1; j < particles.length; j += 1) {
         const q = particles[j];
-        const dx = p.x - q.x;
-        const dy = p.y - q.y;
-        const distance = Math.hypot(dx, dy);
+        const distance = Math.hypot(p.x - q.x, p.y - q.y);
         if (distance < 115) {
           ctx.beginPath();
           ctx.strokeStyle = `rgba(${particleColor}, ${0.075 * (1 - distance / 115)})`;
           ctx.lineWidth = 0.7;
-          ctx.moveTo(p.x, p.y);
-          ctx.lineTo(q.x, q.y);
-          ctx.stroke();
+          ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
         }
       }
     }
@@ -203,16 +190,14 @@
   };
 
   if (canvas && ctx && !reduceMotion) {
-    resizeCanvas();
-    drawParticles();
+    resizeCanvas(); drawParticles();
     let resizeTimer;
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(resizeCanvas, 140);
     }, { passive: true });
     document.addEventListener('visibilitychange', () => {
-      if (document.hidden) cancelAnimationFrame(frame);
-      else drawParticles();
+      if (document.hidden) cancelAnimationFrame(frame); else drawParticles();
     });
   }
 })();
