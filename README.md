@@ -1,34 +1,22 @@
 # Noman Bin Morshed — Academic Portfolio
 
-A responsive, single-page academic portfolio built for GitHub Pages with plain HTML, CSS, and JavaScript.
+A responsive, multi-page academic portfolio built for GitHub Pages.
 
-## Visual features
+## Pages
 
-- Light and dark themes with saved preferences
-- Accent and monochrome palette modes
-- Animated quantum-inspired hero visual
-- Subtle particle background and scroll progress indicator
-- Icon-led section headings and navigation
-- Active-section navigation, reveal animations, and interactive card lighting
-- Responsive mobile navigation and collapsible certification list
-- Reduced-motion support and keyboard-accessible controls
+- `index.html` — Home
+- `about.html` — Academic profile, education, and thesis
+- `research.html` — Research interests, current work, and manuscripts
+- `projects.html` — Selected projects
+- `experience.html` — Experience, skills, and certifications
+- `contact.html` — Contact and collaboration links
 
-## Files
+## Features
 
-```text
-index.html
-assets/
-  css/style.css
-  js/script.js
-  docs/Noman_Bin_Morshed_CV.pdf
-  docs/Noman_Bin_Morshed_Thesis.pdf
-```
+- Persistent light/dark and accent/monochrome appearance modes
+- Animated page transitions with a reduced-motion fallback
+- Responsive navigation and layouts
+- Scroll reveal, particle, orbit, and card spotlight effects
+- Plain HTML, CSS, and JavaScript with no build step
 
-## Deploy on GitHub Pages
-
-1. Upload the contents of this folder to the root of the `Been-Noman.github.io` repository.
-2. In GitHub, open **Settings → Pages**.
-3. Set the source to **Deploy from a branch**, choose `main`, and select `/ (root)`.
-4. Save and open `https://Been-Noman.github.io/` after the deployment completes.
-
-No build process or package installation is required.
+Keep `.nojekyll` in the repository root when deploying through GitHub Pages.
