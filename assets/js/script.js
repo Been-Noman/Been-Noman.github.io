@@ -114,6 +114,18 @@
     certToggle.textContent = collapsed ? 'Show fewer certifications' : 'Show all certifications';
   });
 
+  // Keep the footer control reliable across browsers and page-transition states.
+  document.querySelectorAll('a[href="#top"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      closeNavigation();
+      window.scrollTo({ top: 0, left: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      if (window.location.hash) {
+        window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+      }
+    });
+  });
+
   // Smooth fallback transition for links between local HTML pages.
   const isPlainLeftClick = (event) => event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
   document.querySelectorAll('a[href]').forEach((link) => {
