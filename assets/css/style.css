@@ -774,9 +774,9 @@ body.page-leaving .page-transition span { transform: scaleY(1); }
 /* Smaller, better-spaced display typography. */
 .hero h1 {
   max-width: 800px;
-  font-size: clamp(3.1rem, 6.5vw, 6.5rem);
-  line-height: .98;
-  letter-spacing: -.045em;
+  font-size: clamp(2.9rem, 6vw, 6rem);
+  line-height: .99;
+  letter-spacing: -.04em;
   word-spacing: .08em;
 }
 h2 {
@@ -828,9 +828,9 @@ h3 { letter-spacing: -.012em; word-spacing: .035em; }
 .page-hero-copy { max-width: 760px; }
 .page-hero h1 {
   margin: 0 0 24px;
-  font-size: clamp(3rem, 6.1vw, 5.8rem);
-  line-height: 1;
-  letter-spacing: -.045em;
+  font-size: clamp(2.75rem, 5.65vw, 5.35rem);
+  line-height: 1.02;
+  letter-spacing: -.04em;
   word-spacing: .09em;
   text-wrap: balance;
 }
@@ -911,9 +911,9 @@ body[data-page="contact"] .contact-section { padding-top: 78px; }
   .directory-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {
-  .hero h1 { font-size: clamp(2.85rem, 14.5vw, 4.65rem); line-height: 1.01; letter-spacing: -.038em; word-spacing: .06em; }
+  .hero h1 { font-size: clamp(2.65rem, 13.5vw, 4.25rem); line-height: 1.02; letter-spacing: -.034em; word-spacing: .06em; }
   h2 { gap: 12px; font-size: clamp(1.85rem, 9.5vw, 2.9rem); line-height: 1.1; letter-spacing: -.028em; word-spacing: .05em; }
-  .page-hero h1 { font-size: clamp(2.75rem, 13vw, 4.2rem); line-height: 1.02; }
+  .page-hero h1 { font-size: clamp(2.5rem, 12vw, 3.9rem); line-height: 1.04; }
   .page-hero { padding-bottom: 64px; }
   .directory-card { grid-template-columns: 50px minmax(0, 1fr) auto; min-height: 126px; padding: 20px; gap: 14px; }
   .directory-icon { width: 50px; height: 50px; border-radius: 16px; }
