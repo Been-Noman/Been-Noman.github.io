@@ -1,22 +1,19 @@
 # Noman Bin Morshed — Academic Portfolio
 
-A responsive, multi-page academic portfolio built for GitHub Pages.
+A responsive multi-page academic portfolio presenting my education, research interests, projects, technical experience, and contact information.
 
-## Pages
+**Live website:** https://been-noman.github.io/
+
+## Structure
 
 - `index.html` — Home
-- `about.html` — Academic profile, education, and thesis
-- `research.html` — Research interests, current work, and manuscripts
+- `about.html` — About, education, and thesis
+- `research.html` — Research interests and manuscripts
 - `projects.html` — Selected projects
 - `experience.html` — Experience, skills, and certifications
-- `contact.html` — Contact and collaboration links
+- `contact.html` — Contact information
+- `assets/css/style.css` — Visual design and responsive layout
+- `assets/js/script.js` — Themes, transitions, animations, and interactions
+- `assets/docs/` — CV and thesis files
 
-## Features
-
-- Persistent light/dark and accent/monochrome appearance modes
-- Animated page transitions with a reduced-motion fallback
-- Responsive navigation and layouts
-- Scroll reveal, particle, orbit, and card spotlight effects
-- Plain HTML, CSS, and JavaScript with no build step
-
-Keep `.nojekyll` in the repository root when deploying through GitHub Pages.
+Built with HTML, CSS, and vanilla JavaScript for GitHub Pages.
