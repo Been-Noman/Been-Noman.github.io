@@ -126,23 +126,46 @@
     });
   });
 
-  // Smooth fallback transition for links between local HTML pages.
-  const isPlainLeftClick = (event) => event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
+  // Smooth curtain transition between local HTML pages.
+  const isPlainLeftClick = (event) =>
+    event.button === 0 &&
+    !event.metaKey &&
+    !event.ctrlKey &&
+    !event.shiftKey &&
+    !event.altKey;
+
   document.querySelectorAll('a[href]').forEach((link) => {
     link.addEventListener('click', (event) => {
       if (reduceMotion || !isPlainLeftClick(event) || link.target || link.hasAttribute('download')) return;
+
       const url = new URL(link.href, window.location.href);
       if (url.origin !== window.location.origin) return;
-      const sameDocument = url.pathname === window.location.pathname;
+
+      const sameDocument =
+        url.pathname === window.location.pathname &&
+        url.search === window.location.search;
+
       if (sameDocument && url.hash) return;
-      if (!/\.html$/.test(url.pathname) && !url.pathname.endsWith('/')) return;
+      if (sameDocument && !url.hash) {
+        event.preventDefault();
+        return;
+      }
+
+      if (!url.pathname.endsWith('/') && !/\.html$/i.test(url.pathname)) return;
+
       event.preventDefault();
       closeNavigation();
       body.classList.add('page-leaving');
-      window.setTimeout(() => { window.location.href = url.href; }, 430);
+
+      window.setTimeout(() => {
+        window.location.href = url.href;
+      }, 560);
     });
   });
-  window.addEventListener('pageshow', () => body.classList.remove('page-leaving'));
+
+  window.addEventListener('pageshow', () => {
+    body.classList.remove('page-leaving');
+  });
 
   const canvas = document.getElementById('particle-canvas');
   const ctx = canvas?.getContext('2d');
