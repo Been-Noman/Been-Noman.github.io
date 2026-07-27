@@ -736,40 +736,61 @@ noscript { display: block; padding: 12px; text-align: center; color: var(--muted
 /* ==========================================================
    Multi-page architecture, refined type scale, and navigation
    ========================================================== */
-@view-transition { navigation: auto; }
-::view-transition-old(root) { animation: page-fade-out .24s ease both; }
-::view-transition-new(root) { animation: page-fade-in .52s var(--ease) both; }
-@keyframes page-fade-out { to { opacity: 0; transform: translateY(-8px); } }
-@keyframes page-fade-in { from { opacity: 0; transform: translateY(12px); } }
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 9997;
-  pointer-events: none;
-  background: var(--bg);
-  opacity: 0;
-  transition: opacity .28s ease;
-}
-body.page-leaving::before { opacity: 1; }
+/* Smooth, theme-aware curtain transition between pages. */
 .page-transition {
   position: fixed;
-  inset: 0;
+  inset: -4vh -3vw;
   z-index: 9998;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
   pointer-events: none;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  background:
+    radial-gradient(circle at 76% 18%, rgba(var(--primary-rgb), .18), transparent 38%),
+    radial-gradient(circle at 18% 82%, rgba(var(--primary-rgb), .08), transparent 34%),
+    linear-gradient(155deg, var(--bg) 0%, var(--bg-deep) 52%, var(--bg) 100%);
+  box-shadow: 0 34px 90px rgba(var(--primary-rgb), .12);
+  animation: curtain-reveal .72s cubic-bezier(.76, 0, .24, 1) both;
 }
-.page-transition span {
-  background: var(--text);
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform .42s var(--ease);
+.page-transition span { display: none; }
+.page-transition::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  opacity: .72;
+  background: linear-gradient(
+    115deg,
+    transparent 27%,
+    rgba(var(--primary-rgb), .04) 42%,
+    rgba(var(--primary-rgb), .13) 50%,
+    rgba(var(--primary-rgb), .04) 58%,
+    transparent 73%
+  );
+  transform: translateX(-18%);
 }
-.page-transition span:nth-child(2) { transition-delay: .045s; }
-.page-transition span:nth-child(3) { transition-delay: .09s; }
-body.page-leaving .page-transition span { transform: scaleY(1); }
+.page-transition::after {
+  content: "";
+  position: absolute;
+  right: -8%;
+  bottom: -34px;
+  left: -8%;
+  height: 72px;
+  opacity: .82;
+  border-radius: 0 0 50% 50%;
+  background: var(--bg-deep);
+  filter: blur(16px);
+}
+body.page-leaving .page-transition {
+  animation: curtain-cover .56s cubic-bezier(.76, 0, .24, 1) both;
+}
+@keyframes curtain-cover {
+  from { transform: translate3d(0, -105%, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+@keyframes curtain-reveal {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, 105%, 0); }
+}
 
 /* Smaller, better-spaced display typography. */
 .hero h1 {
@@ -918,8 +939,12 @@ body[data-page="contact"] .contact-section { padding-top: 78px; }
   .directory-card { grid-template-columns: 50px minmax(0, 1fr) auto; min-height: 126px; padding: 20px; gap: 14px; }
   .directory-icon { width: 50px; height: 50px; border-radius: 16px; }
   .footer-links { width: 100%; justify-content: space-between; }
-  .page-transition { display: none; }
+  .page-transition {
+    inset: -3vh -6vw;
+    animation-duration: .64s;
+  }
+  body.page-leaving .page-transition { animation-duration: .5s; }
 }
 @media (prefers-reduced-motion: reduce) {
-  body::before, .page-transition span { transition: none !important; }
+  .page-transition { display: none; animation: none !important; }
 }
