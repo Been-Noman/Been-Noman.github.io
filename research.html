@@ -358,6 +358,8 @@
 
 
 <!-- Research 3: CVRPTW QUBO Compression -->
+
+<!-- Research 3: CVRPTW QUBO Optimization -->
 <article class="project-card featured reveal"
          style="--card-index:3;">
 
@@ -372,58 +374,28 @@
     </h3>
 
     <ul>
-
         <li>
-            Developed a hybrid optimization framework
-            for CVRPTW using LP-dual-guided unordered
-            route pricing, hierarchical QUBO-based
-            candidate compression, and exact
-            set-partitioning optimization.
+            Developed an LP-guided hierarchical QUBO framework
+            for CVRPTW, combining dual-informed route generation
+            with QUBO-based route-pool compression.
         </li>
 
         <li>
-            Designed a full-pool LP-guided QUBO
-            compression architecture in which linear
-            programming informs route ranking without
-            hard-pruning the candidate pool.
-            Introduced dynamically sized,
-            density-constrained QUBO blocks to
-            support scalable route selection.
-        </li>
-
-        <li>
-            Integrated MILP-assisted operational
-            kernel selection with route feedback,
-            Large Neighborhood Search, and exact
-            recombination to improve vehicle count
-            and travel distance while maintaining
-            capacity and time-window feasibility.
+            Integrated MILP-assisted route selection,
+            Large Neighborhood Search, and exact refinement
+            to minimize fleet size and travel distance
+            under capacity and time-window constraints.
         </li>
 
         <li>
             Evaluated 12 Solomon benchmark instances,
-            including 11 validation cases and one
-            development reference. Achieved an
-            average 87.88% reduction in the enriched
-            candidate-route pool while preserving
-            feasible final route partitions.
-            Full restricted-pool optimality
-            certificates were not available for
-            every instance.
+            achieving 87.88% average route-pool compression
+            while retaining feasible routing solutions.
         </li>
-
-        <li>
-            Performed LP-versus-QUBO compression
-            comparisons, route-pool integrity checks,
-            and robustness evaluations. The QUBO
-            experiments used classical simulated
-            annealing without claiming quantum
-            hardware advantage.
-        </li>
-
     </ul>
 
 </article>
+
 
 
 </div>
